@@ -52,6 +52,8 @@ const cerrarMenu = () => {
 
 const vReveal = {
   mounted(element) {
+    element.classList.add('reveal')
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return
@@ -986,28 +988,25 @@ onMounted(async () => {
   .card-lightblue{ --card-accent:#3f7fd6; --illus-bg:#eaf3fb; }
   .card-orange{ --card-accent:#f2632b; --illus-bg:#fdece1; }
 
-  .reveal,
-  [v-reveal] {
+  .reveal {
     opacity: 0;
     transform: translateY(28px);
     transition: opacity .7s ease, transform .7s ease;
   }
-  .reveal.is-visible,
-  [v-reveal].is-visible {
+  .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
   }
-  .cards > [v-reveal]:nth-child(2),
-  .team-grid > [v-reveal]:nth-child(2) { transition-delay: .08s; }
-  .cards > [v-reveal]:nth-child(3),
-  .team-grid > [v-reveal]:nth-child(3) { transition-delay: .16s; }
-  .team-grid > [v-reveal]:nth-child(4) { transition-delay: .24s; }
-  .team-grid > [v-reveal]:nth-child(5) { transition-delay: .32s; }
-  .team-grid > [v-reveal]:nth-child(6) { transition-delay: .4s; }
+  .cards > .reveal:nth-child(2),
+  .team-grid > .reveal:nth-child(2) { transition-delay: .08s; }
+  .cards > .reveal:nth-child(3),
+  .team-grid > .reveal:nth-child(3) { transition-delay: .16s; }
+  .team-grid > .reveal:nth-child(4) { transition-delay: .24s; }
+  .team-grid > .reveal:nth-child(5) { transition-delay: .32s; }
+  .team-grid > .reveal:nth-child(6) { transition-delay: .4s; }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    [v-reveal] {
+    .reveal {
       opacity: 1;
       transform: none;
       transition: none;
