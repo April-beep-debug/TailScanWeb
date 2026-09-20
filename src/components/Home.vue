@@ -370,7 +370,7 @@ onMounted(async () => {
           <span class="paw-tag orange">🐾</span>
         </div>
         <h3>Lisdary Díaz</h3>
-        <div class="role">Developer-Leader</div>
+        <div class="role">Developer & Leader</div>
         <div class="mini-divider orange"><span class="line"></span><span class="paw">🐾</span><span class="line"></span></div>
       </div>
 
@@ -394,7 +394,31 @@ onMounted(async () => {
           <span class="paw-tag orange">🐾</span>
         </div>
         <h3>Avril Rendon</h3>
-        <div class="role">Developer-Leader</div>
+        <div class="role">Full-Stack Developer & Leader</div>
+        <div class="mini-divider"><span class="line"></span><span class="paw">🐾</span><span class="line"></span></div>
+      </div>
+
+      <!-- Aida -->
+      <div v-reveal class="team-card">
+        <span class="badge-icon">✏️</span>
+        <div class="photo-wrap">
+          <img src="../assets/img/aida.png" alt="Aida">
+          <span class="paw-tag">🐾</span>
+        </div>
+        <h3>Aida</h3>
+        <div class="role">Member</div>
+        <div class="mini-divider"><span class="line"></span><span class="paw">🐾</span><span class="line"></span></div>
+      </div>
+
+      <!-- Natalia -->
+      <div v-reveal class="team-card">
+        <span class="badge-icon">✏️</span>
+        <div class="photo-wrap">
+          <img src="../assets/img/Natalia.png" alt="Natalia">
+          <span class="paw-tag">🐾</span>
+        </div>
+        <h3>Natalia</h3>
+        <div class="role">Member</div>
         <div class="mini-divider"><span class="line"></span><span class="paw">🐾</span><span class="line"></span></div>
       </div>
 
