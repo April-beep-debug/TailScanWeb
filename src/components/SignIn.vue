@@ -58,7 +58,7 @@ const signUp = async () => {
     </div>
 
     <div class="login-card">
-      <img class="dog-logo" src="../assets/img/mascota.png" alt="Dog Logo" />
+      <img class="dog-logo" src="../assets/img/logo.png" alt="Dog Logo" />
 
       <div class="brand">
         <span class="tail">Tail</span><span class="scan">Scan</span>
@@ -188,16 +188,21 @@ const signUp = async () => {
   }
 
   .dog-logo{
-    width:80px;
-    height:80px;
-    margin:0 auto 14px;
+    display:block;
+    width:116px;
+    height:116px;
+    object-fit:contain;
+    margin:0 auto;
     color:var(--navy);
   }
   .dog-logo .tail-accent{ stroke:var(--orange); }
 
   .brand{
+    display:block;
+    width:100%;
     font-size:44px;
     font-weight:800;
+    text-align:center;
     margin-bottom:8px;
   }
   .brand .tail{ color:var(--navy); }
@@ -298,6 +303,7 @@ const signUp = async () => {
 
   @media (max-width:600px){
     .login-card{ padding:36px 26px 30px; }
+    .dog-logo{ width:88px; height:88px; }
     .brand{ font-size:34px; }
   }
 </style>
