@@ -490,7 +490,7 @@ onMounted(async () => {
   /* ===== Decorative background ===== */
   .bg-wrap{
     position:relative;
-    min-height:100vh;
+    min-height:auto;
     background:linear-gradient(115deg, var(--navy) 0%, var(--blue) 28%, #eef2fb 50%, #ffe3c9 62%, var(--orange) 85%, var(--orange-deep) 100%);
     overflow:hidden;
     padding-bottom:60px;
@@ -762,7 +762,7 @@ onMounted(async () => {
  
   .bg-wrap{
     position:relative;
-    min-height:100vh;
+    min-height:auto;
     background:linear-gradient(120deg, #ffffff 0%, #fbf7f1 30%, #fff3e8 55%, #ffe0c4 100%);
     overflow:hidden;
     padding-bottom:80px;
@@ -998,11 +998,58 @@ onMounted(async () => {
     .hero h1{ font-size:30px; }
   }
   @media (max-width:900px){
-    .hero-layout{ flex-direction:column; }
-    .card{ flex-direction:column; padding:36px; text-align:center; }
-    .hero-side-image{ flex-basis:auto; width:100%; max-width:320px; }
-    .hero-text{ order:1; }
-    .buttons{ justify-content:center; }
+    .hero-layout{
+      position:relative;
+      flex-direction:column;
+      min-height:620px;
+      padding:0;
+      gap:0;
+    }
+    .hero-layout .card{
+      position:absolute;
+      z-index:3;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      flex-direction:column;
+      padding:28px;
+      text-align:center;
+      background:rgba(30,58,138,.78);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow:0 18px 45px rgba(30,58,138,.35);
+      backdrop-filter:blur(10px);
+    }
+    .hero-layout .card .hero-text{ gap:14px; }
+    .hero-layout .card .hero-text h1{ color:#fff; font-size:30px; margin-bottom:12px; }
+    .hero-layout .card .hero-text p{ color:rgba(255,255,255,.9); font-size:14px; line-height:1.55; margin-bottom:0; }
+    .hero-layout .card .buttons{ justify-content:center; margin-top:10px; }
+    .hero-layout .card .btn{ padding:12px 18px; }
+    .hero-side-image{
+      position:relative;
+      flex-basis:auto;
+      width:100%;
+      max-width:none;
+      height:620px;
+      overflow:hidden;
+    }
+    .hero-side-image img{
+      width:100%;
+      height:100%;
+      max-width:none;
+      max-height:none;
+      border:0;
+      border-radius:0;
+      object-fit:cover;
+      object-position:center;
+    }
+    .hero-side-image::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(20,38,90,.05) 30%, rgba(20,38,90,.6) 100%);
+      pointer-events:none;
+    }
     header{ flex-direction:column; gap:16px; padding:20px 24px; }
     nav{ font-size:13px; gap:16px; }
   }
@@ -1430,22 +1477,43 @@ onMounted(async () => {
 
     .hero-layout {
       margin-top: 8px;
-      padding: 0 14px;
-      gap: 14px;
+      min-height: 610px;
+      padding: 0;
+      gap: 0;
     }
 
     .hero-layout .card {
-      padding: 28px 20px;
-      border-radius: 20px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 22px 16px;
+      border-radius: 18px;
     }
 
-    .hero-text h1 {
-      font-size: 28px;
+    .hero-layout .card .hero-text h1 {
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .hero-layout .card .hero-text p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-layout .card .buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero-layout .card .btn {
+      justify-content: center;
+      font-size: 13px;
     }
 
     .hero-side-image {
-      max-width: 260px;
-      margin: 0 auto;
+      width: 100%;
+      height: 610px;
+      margin: 0;
     }
 
     .team-section {
