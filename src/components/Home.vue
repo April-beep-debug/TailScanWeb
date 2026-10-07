@@ -50,27 +50,6 @@ const cerrarMenu = () => {
   menuAbierto.value = false
 }
 
-const vReveal = {
-  mounted(element) {
-    element.classList.add('reveal')
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return
-        element.classList.add('is-visible')
-        observer.unobserve(element)
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -48px' }
-    )
-
-    element._revealObserver = observer
-    observer.observe(element)
-  },
-  unmounted(element) {
-    element._revealObserver?.disconnect()
-  }
-}
-
 onMounted(async () => {
   const { data } = await insforge.auth.getCurrentUser()
   usuario.value = data?.user || null
@@ -102,7 +81,7 @@ onMounted(async () => {
     <span></span><span></span><span></span>
   </div>
  
-  <header v-reveal class="home-header">
+  <header class="home-header">
     <div class="logo">
       <img src="../assets/img/mascota.png" alt="Pet" class="logo-img" />
       <span class="tail">Tail</span><span class="scan">Scan</span>
@@ -139,8 +118,8 @@ onMounted(async () => {
     </div>
   </header>
  
-  <div v-reveal class="hero-layout">
-    <div v-reveal class="card">
+  <div class="hero-layout">
+    <div class="card">
       <div class="hero-text">
         <h1>Welcome to <span class="accent">TailScan</span>! 🐾</h1>
         <p>We are glad you are here. Register your pet with a QR code, adopt a new companion, access professional services, and help report lost animals.</p>
@@ -151,7 +130,7 @@ onMounted(async () => {
       </div>
     </div>
 
-    <div v-reveal class="hero-side-image">
+    <div class="hero-side-image">
       <img src="../assets/img/hero.png" alt="Pet" />
     </div>
   </div>
@@ -177,15 +156,15 @@ onMounted(async () => {
     <span></span><span></span><span></span>
   </div>
  
-  <section v-reveal class="hero">
+  <section class="hero">
     <h1>Everything for your pet's<br>well-being, your <span class="accent">best friend</span> 🐾</h1>
     <p>Connect, care for, and improve pets' lives<br>from one place.</p>
   </section>
  
-  <div v-reveal class="cards">
+  <div class="cards">
  
     <!-- Card 1: Adopción y perdidos -->
-    <div v-reveal class="card card-blue">
+    <div class="card card-blue">
       <div class="badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></svg>
       </div>
@@ -231,7 +210,7 @@ onMounted(async () => {
     </div>
  
     <!-- Card 2: Cuidados -->
-    <div v-reveal class="card card-lightblue">
+    <div class="card card-lightblue">
       <div class="badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
       </div>
@@ -283,7 +262,7 @@ onMounted(async () => {
     </div>
  
     <!-- Card 3: Servicios -->
-    <div v-reveal class="card card-orange">
+    <div class="card card-orange">
       <div class="badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l2-6h14l2 6"/><path d="M3 9v10a1 1 0 001 1h16a1 1 0 001-1V9"/><path d="M3 9a3 3 0 006 0 3 3 0 006 0 3 3 0 006 0"/></svg>
       </div>
@@ -331,15 +310,15 @@ onMounted(async () => {
 
 <!-- ===== SECCIÓN DEL EQUIPO ===== -->
 <div class="team-section">
-  <div v-reveal class="team-container">
-    <div v-reveal class="team-header">
+  <div class="team-container">
+    <div class="team-header">
       <h2>Our <span class="accent">Team</span> 🐾</h2>
       <p>Passionate people working every day to improve pets' lives.</p>
     </div>
 
     <div class="team-grid">
       <!-- Nahomy Flores -->
-      <div v-reveal class="team-card">
+      <div class="team-card">
         <span class="badge-icon">✏️</span>
         <div class="photo-wrap">
           <img src="../assets/img/naho.png" alt="Nahomy Flores">
@@ -351,7 +330,7 @@ onMounted(async () => {
       </div>
 
       <!-- Gerardo Echeverria -->
-      <div v-reveal class="team-card">
+      <div class="team-card">
         <span class="badge-icon">✏️</span>
         <div class="photo-wrap">
           <img src="../assets/img/gerardo.png" alt="Gerardo Echeverria">
@@ -363,7 +342,7 @@ onMounted(async () => {
       </div>
 
       <!-- Lisdary Díaz -->
-      <div v-reveal class="team-card orange-role">
+      <div class="team-card orange-role">
         <span class="badge-icon orange">👑</span>
         <div class="photo-wrap">
           <img src="../assets/img/lis.png" alt="Lisdary Díaz">
@@ -375,7 +354,7 @@ onMounted(async () => {
       </div>
 
       <!-- Kenny Martínez -->
-      <div v-reveal class="team-card">
+      <div class="team-card">
         <span class="badge-icon">✏️</span>
         <div class="photo-wrap">
           <img src="../assets/img/Kenny.png" alt="Kenny Martínez">
@@ -387,7 +366,7 @@ onMounted(async () => {
       </div>
 
       <!-- Avril Rendon -->
-      <div v-reveal class="team-card orange-role">
+      <div class="team-card orange-role">
         <span class="badge-icon orange">👑</span>
         <div class="photo-wrap">
           <img src="../assets/img/avril.png" alt="Avril Rendon">
@@ -399,7 +378,7 @@ onMounted(async () => {
       </div>
 
       <!-- Aida -->
-      <div v-reveal class="team-card">
+      <div class="team-card">
         <span class="badge-icon">✏️</span>
         <div class="photo-wrap">
           <img src="../assets/img/aida.png" alt="Aida">
@@ -411,7 +390,7 @@ onMounted(async () => {
       </div>
 
       <!-- Natalia -->
-      <div v-reveal class="team-card">
+      <div class="team-card">
         <span class="badge-icon">✏️</span>
         <div class="photo-wrap">
           <img src="../assets/img/Natalia.png" alt="Natalia">
@@ -423,7 +402,7 @@ onMounted(async () => {
       </div>
 
       <!-- Quote Card -->
-      <div v-reveal class="quote-card">
+      <div class="quote-card">
         <div class="quote-icon">
           <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="#ff7a1a" stroke-width="3.5">
             <path d="M50 30 C 30 30, 15 45, 15 62 C 15 78, 28 88, 42 85 C 42 85, 35 92, 50 95 C 65 92, 58 85, 58 85 C 72 88, 85 78, 85 62 C 85 45, 70 30, 50 30 Z"/>
@@ -439,7 +418,7 @@ onMounted(async () => {
   </div>
 </div>
 
-<footer v-reveal class="footer">
+<footer class="footer">
   <div class="blob-left"></div>
   <div class="blob-right"></div>
  
@@ -1011,31 +990,6 @@ onMounted(async () => {
   .card-blue{ --card-accent:#2f5fd1; --illus-bg:#e4ecfb; }
   .card-lightblue{ --card-accent:#3f7fd6; --illus-bg:#eaf3fb; }
   .card-orange{ --card-accent:#f2632b; --illus-bg:#fdece1; }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity .7s ease, transform .7s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .cards > .reveal:nth-child(2),
-  .team-grid > .reveal:nth-child(2) { transition-delay: .08s; }
-  .cards > .reveal:nth-child(3),
-  .team-grid > .reveal:nth-child(3) { transition-delay: .16s; }
-  .team-grid > .reveal:nth-child(4) { transition-delay: .24s; }
-  .team-grid > .reveal:nth-child(5) { transition-delay: .32s; }
-  .team-grid > .reveal:nth-child(6) { transition-delay: .4s; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-  }
  
   @media (max-width:960px){
     .cards{ grid-template-columns: 1fr; }
