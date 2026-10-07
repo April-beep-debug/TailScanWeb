@@ -65,6 +65,140 @@ html[data-theme='dark'] textarea {
 	border-color: #34415f;
 }
 
+html[data-theme='dark'] .bg-wrap,
+html[data-theme='dark'] .page,
+html[data-theme='dark'] .consejos-container,
+html[data-theme='dark'] .tienda-collares,
+html[data-theme='dark'] .pagos-page,
+html[data-theme='dark'] .donaciones-page,
+html[data-theme='dark'] .articulos-page,
+html[data-theme='dark'] .veterinarios-page,
+html[data-theme='dark'] .qr-page,
+html[data-theme='dark'] .verify-container,
+html[data-theme='dark'] .login-card,
+html[data-theme='dark'] .team-section,
+html[data-theme='dark'] .footer {
+	background-color: #0b1220 !important;
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] .bg-wrap,
+html[data-theme='dark'] .page,
+html[data-theme='dark'] .consejos-container,
+html[data-theme='dark'] .tienda-collares,
+html[data-theme='dark'] .pagos-page,
+html[data-theme='dark'] .donaciones-page,
+html[data-theme='dark'] .articulos-page,
+html[data-theme='dark'] .veterinarios-page,
+html[data-theme='dark'] .qr-page,
+html[data-theme='dark'] .verify-container,
+html[data-theme='dark'] .login-card,
+html[data-theme='dark'] .team-section,
+html[data-theme='dark'] .footer {
+	background-image: linear-gradient(135deg, #101a2d, #0b1220) !important;
+}
+
+html[data-theme='dark'] .panel,
+html[data-theme='dark'] .checkout-section,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .card-producto,
+html[data-theme='dark'] .producto-card,
+html[data-theme='dark'] .productos-container,
+html[data-theme='dark'] .vet-card,
+html[data-theme='dark'] .pet-card,
+html[data-theme='dark'] .rec-card,
+html[data-theme='dark'] .tip-card,
+html[data-theme='dark'] .form-card,
+html[data-theme='dark'] .form-area,
+html[data-theme='dark'] .resumen,
+html[data-theme='dark'] .payment-option,
+html[data-theme='dark'] .card-block,
+html[data-theme='dark'] .pet-card-header,
+html[data-theme='dark'] .pet-card-body,
+html[data-theme='dark'] .qr-container,
+html[data-theme='dark'] .hero-wrap,
+html[data-theme='dark'] .cards-wrap,
+html[data-theme='dark'] .drawer,
+html[data-theme='dark'] .modal-card,
+html[data-theme='dark'] .login-card,
+html[data-theme='dark'] .team-card,
+html[data-theme='dark'] .quote-card,
+html[data-theme='dark'] .confirmation-card,
+html[data-theme='dark'] .result-card,
+html[data-theme='dark'] .product-card,
+html[data-theme='dark'] .section-card,
+html[data-theme='dark'] .info-card,
+html[data-theme='dark'] .list-card {
+	background-color: #17233d !important;
+	border-color: rgba(255, 255, 255, .1) !important;
+	color: #e8eefc !important;
+	box-shadow: 0 18px 45px rgba(0, 0, 0, .28) !important;
+}
+
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3,
+html[data-theme='dark'] h4,
+html[data-theme='dark'] .panel-title,
+html[data-theme='dark'] .section-heading,
+html[data-theme='dark'] .team-header,
+html[data-theme='dark'] .hero-title,
+html[data-theme='dark'] .card-title {
+	color: #f8fbff !important;
+}
+
+html[data-theme='dark'] p,
+html[data-theme='dark'] .muted,
+html[data-theme='dark'] .description,
+html[data-theme='dark'] .section-description,
+html[data-theme='dark'] .product-description,
+html[data-theme='dark'] .card-subtitle {
+	color: #aebbd0 !important;
+}
+
+html[data-theme='dark'] input,
+html[data-theme='dark'] select,
+html[data-theme='dark'] textarea {
+	background-color: #15213a !important;
+	color: #f8fbff !important;
+	border-color: #34415f !important;
+}
+
+html[data-theme='dark'] .page-back-button,
+html[data-theme='dark'] .icon-btn,
+html[data-theme='dark'] .filter-btn,
+html[data-theme='dark'] .filtro-btn,
+html[data-theme='dark'] .drawer-backdrop,
+html[data-theme='dark'] .stock-badge,
+html[data-theme='dark'] .status-badge,
+html[data-theme='dark'] .tag,
+html[data-theme='dark'] .badge {
+	background-color: #17233d !important;
+	color: #e8eefc !important;
+	border-color: #34415f !important;
+}
+
+html[data-theme='dark'] .drawer-backdrop {
+	background-color: rgba(4, 10, 22, .72) !important;
+}
+
+html[data-theme='dark'] .primary-btn,
+html[data-theme='dark'] .btn-primary,
+html[data-theme='dark'] .panel-pay-btn,
+html[data-theme='dark'] .login-btn,
+html[data-theme='dark'] .submit-btn {
+	background: linear-gradient(135deg, #1e3a8a, #2f5fd1) !important;
+	color: #fff !important;
+}
+
+html[data-theme='dark'] .btn-outline,
+html[data-theme='dark'] .secondary-btn,
+html[data-theme='dark'] .filter-btn,
+html[data-theme='dark'] .filtro-btn {
+	border-color: #3e6ed1 !important;
+	color: #dce6ff !important;
+}
+
 img,
 svg,
 canvas,
@@ -207,4 +341,211 @@ textarea {
 		margin-top: 25px;
 		font-size: 16px;
 	}
+}
+
+/* MODE DARK: COMPONENTS WITH LOCAL WHITE BACKGROUNDS */
+html[data-theme='dark'] body,
+html[data-theme='dark'] .page,
+html[data-theme='dark'] .bg-wrap,
+html[data-theme='dark'] .home-header,
+html[data-theme='dark'] .team-section,
+html[data-theme='dark'] .footer,
+html[data-theme='dark'] .qr-page,
+html[data-theme='dark'] .verify-container,
+html[data-theme='dark'] .consejos-container,
+html[data-theme='dark'] .tienda-collares,
+html[data-theme='dark'] .pagos-page,
+html[data-theme='dark'] .donaciones-page,
+html[data-theme='dark'] .articulos-page,
+html[data-theme='dark'] .veterinarios-page {
+	background-color: #0b1220 !important;
+	background-image: linear-gradient(135deg, #101a2d 0%, #0b1220 100%) !important;
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] .cards > .card,
+html[data-theme='dark'] .hero-layout .card,
+html[data-theme='dark'] .team-card,
+html[data-theme='dark'] .quote-card,
+html[data-theme='dark'] .panel,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .card-producto,
+html[data-theme='dark'] .producto-card,
+html[data-theme='dark'] .vet-card,
+html[data-theme='dark'] .pet-card,
+html[data-theme='dark'] .rec-card,
+html[data-theme='dark'] .tip-card,
+html[data-theme='dark'] .form-card,
+html[data-theme='dark'] .checkout-section,
+html[data-theme='dark'] .form-area,
+html[data-theme='dark'] .resumen,
+html[data-theme='dark'] .payment-option,
+html[data-theme='dark'] .card-block,
+html[data-theme='dark'] .pet-card-header,
+html[data-theme='dark'] .pet-card-body,
+html[data-theme='dark'] .qr-container,
+html[data-theme='dark'] .hero-wrap,
+html[data-theme='dark'] .cards-wrap,
+html[data-theme='dark'] .drawer,
+html[data-theme='dark'] .modal-card,
+html[data-theme='dark'] .login-card,
+html[data-theme='dark'] .confirmation-card,
+html[data-theme='dark'] .result-card,
+html[data-theme='dark'] .section-card,
+html[data-theme='dark'] .info-card,
+html[data-theme='dark'] .list-card {
+	background-color: #17233d !important;
+	border-color: rgba(255,255,255,.1) !important;
+	color: #e8eefc !important;
+	box-shadow: 0 20px 50px rgba(0,0,0,.3) !important;
+}
+
+html[data-theme='dark'] .home-header,
+html[data-theme='dark'] .page-back-button,
+html[data-theme='dark'] .icon-btn,
+html[data-theme='dark'] .filter-btn,
+html[data-theme='dark'] .filtro-btn,
+html[data-theme='dark'] .drawer-backdrop,
+html[data-theme='dark'] .stock-badge,
+html[data-theme='dark'] .status-badge,
+html[data-theme='dark'] .tag,
+html[data-theme='dark'] .badge {
+	background-color: #17233d !important;
+	color: #e8eefc !important;
+	border-color: #34415f !important;
+}
+
+html[data-theme='dark'] header {
+	background: rgba(11,18,32,.88) !important;
+	border-bottom-color: rgba(255,255,255,.08) !important;
+}
+
+html[data-theme='dark'] .hero-layout .card,
+html[data-theme='dark'] .hero-layout .card .hero-text h1,
+html[data-theme='dark'] .hero-layout .card .hero-text p,
+html[data-theme='dark'] .hero-layout .card .btn {
+	color: #fff !important;
+}
+
+html[data-theme='dark'] .hero-layout .card {
+	background: rgba(20,38,90,.88) !important;
+	border-color: rgba(255,255,255,.2) !important;
+}
+
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3,
+html[data-theme='dark'] h4,
+html[data-theme='dark'] .panel-title,
+html[data-theme='dark'] .section-heading,
+html[data-theme='dark'] .team-header,
+html[data-theme='dark'] .hero-title,
+html[data-theme='dark'] .card-title,
+html[data-theme='dark'] .title,
+html[data-theme='dark'] .hero h1 {
+	color: #f8fbff !important;
+}
+
+html[data-theme='dark'] p,
+html[data-theme='dark'] .muted,
+html[data-theme='dark'] .description,
+html[data-theme='dark'] .section-description,
+html[data-theme='dark'] .product-description,
+html[data-theme='dark'] .card-subtitle,
+html[data-theme='dark'] .hero p,
+html[data-theme='dark'] .subtitle,
+html[data-theme='dark'] .role {
+	color: #aebbd0 !important;
+}
+
+html[data-theme='dark'] input,
+html[data-theme='dark'] select,
+html[data-theme='dark'] textarea {
+	background-color: #15213a !important;
+	color: #f8fbff !important;
+	border-color: #34415f !important;
+}
+
+html[data-theme='dark'] .link-row,
+html[data-theme='dark'] .link-row:hover {
+	background: #101a2d !important;
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] .btn-outline,
+html[data-theme='dark'] .secondary-btn,
+html[data-theme='dark'] .filter-btn,
+html[data-theme='dark'] .filtro-btn {
+	border-color: #3e6ed1 !important;
+	color: #dce6ff !important;
+}
+
+html[data-theme='dark'] .primary-btn,
+html[data-theme='dark'] .btn-primary,
+html[data-theme='dark'] .panel-pay-btn,
+html[data-theme='dark'] .login-btn,
+html[data-theme='dark'] .submit-btn {
+	background: linear-gradient(135deg, #1e3a8a, #2f5fd1) !important;
+	color: #fff !important;
+}
+
+html[data-theme='dark'] .drawer-backdrop {
+	background-color: rgba(4,10,22,.78) !important;
+}
+
+html[data-theme='dark'] .hero-wrap,
+html[data-theme='dark'] .medicina-general,
+html[data-theme='dark'] #app {
+	background: #0b1220 !important;
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] .hero-wrap {
+	border-color: rgba(255,255,255,.08) !important;
+}
+
+html[data-theme='dark'] .hero-wrap .blob-left {
+	background: radial-gradient(circle at 30% 30%, #1e3a8a, #101a2d) !important;
+	opacity: .8;
+}
+
+html[data-theme='dark'] .form-card,
+html[data-theme='dark'] .input-field,
+html[data-theme='dark'] .textarea-field,
+html[data-theme='dark'] .toolbar,
+html[data-theme='dark'] .segmented,
+html[data-theme='dark'] .btn-secondary {
+	background: #17233d !important;
+	border-color: #34415f !important;
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] .input-field input,
+html[data-theme='dark'] .input-field select,
+html[data-theme='dark'] .textarea-field textarea {
+	background: transparent !important;
+	color: #f8fbff !important;
+}
+
+html[data-theme='dark'] .input-field input::placeholder,
+html[data-theme='dark'] .textarea-field textarea::placeholder {
+	color: #aebbd0 !important;
+}
+
+html[data-theme='dark'] .segment,
+html[data-theme='dark'] .segment:hover,
+html[data-theme='dark'] .segment.active,
+html[data-theme='dark'] .btn-secondary {
+	color: #e8eefc !important;
+}
+
+html[data-theme='dark'] #app .header,
+html[data-theme='dark'] #app .toolbar {
+	border-color: #34415f !important;
+}
+
+html[data-theme='dark'] #app nav a,
+html[data-theme='dark'] #app .stat-strip,
+html[data-theme='dark'] #app .gps-indicator {
+	color: #aebbd0 !important;
 }
