@@ -4,12 +4,19 @@
     <p>Enviamos un código a {{ email }}</p>
     <input
       v-model="code"
+      type="text"
+      inputmode="numeric"
+      autocomplete="one-time-code"
       placeholder="Código de 6 dígitos"
       maxlength="6"
       class="code-input"
     />
-    <button @click="verify" class="btn-verify">Verificar</button>
-    <button @click="resend" class="btn-resend">Reenviar código</button>
+    <button @click="verify" class="btn-verify" :disabled="isVerifying">
+      {{ isVerifying ? 'Verificando...' : 'Verificar' }}
+    </button>
+    <button @click="resend" class="btn-resend" :disabled="isResending">
+      {{ isResending ? 'Reenviando...' : 'Reenviar código' }}
+    </button>
     <p v-if="message" class="message">{{ message }}</p>
   </div>
 </template>
@@ -24,23 +31,51 @@ const router = useRouter()
 const email = route.query.email
 const code = ref('')
 const message = ref('')
+const isVerifying = ref(false)
+const isResending = ref(false)
 
 const verify = async () => {
-  const { error } = await insforge.auth.verifyEmail({
-    email,
-    code: code.value,
-  })
-  if (error) {
-    message.value = 'Código inválido o expirado'
-  } else {
-    message.value = 'Correo verificado. Redirigiendo...'
-    setTimeout(() => router.push('/login'), 1500)
+  if (isVerifying.value) return
+
+  isVerifying.value = true
+  message.value = ''
+
+  try {
+    const { error } = await insforge.auth.verifyEmail({
+      email,
+      otp: code.value.trim(),
+    })
+
+    if (error) {
+      message.value = `No se pudo verificar el código. Comprueba que sea correcto y que no haya expirado. ${error.message}`
+      return
+    }
+
+    await router.push('/home')
+  } catch (error) {
+    message.value = `Error al verificar el correo: ${error.message}`
+  } finally {
+    isVerifying.value = false
   }
 }
 
 const resend = async () => {
-  const { error } = await insforge.auth.resendVerificationEmail({ email })
-  message.value = error ? 'Error al reenviar' : 'Nuevo código enviado'
+  if (isResending.value) return
+
+  isResending.value = true
+  message.value = ''
+
+  try {
+    const { error } = await insforge.auth.resendVerificationEmail({ email })
+    message.value = error
+      ? `No se pudo reenviar el código: ${error.message}`
+      : 'Nuevo código enviado. Usa el código más reciente.'
+    if (!error) code.value = ''
+  } catch (error) {
+    message.value = `Error al reenviar el código: ${error.message}`
+  } finally {
+    isResending.value = false
+  }
 }
 </script>
 
